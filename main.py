@@ -1,19 +1,3 @@
-"""
-main.py
--------
-
-Arquivo principal do projeto de análise de dados SCOP.
-
-Pipeline geral:
-1. Leitura dos arquivos FASTA (SCOP) -> (classe, sequência)
-2. Geração de k-mers com salto -> matriz binária de presença/ausência
-3. Pré-processamento -> normalização + codificação de rótulos
-4. Otimização da clusterização (KMeans) usando amostra + PCA + métricas interna/externa
-5. PCA no conjunto completo + KMeans com melhores parâmetros
-6. Análise dos padrões de k-mers e classes por cluster
-7. Visualização 2D (PCA) colorida por cluster
-"""
-
 from pathlib import Path
 from sklearn.cluster import KMeans
 from src.leitura_fasta import carregar_sequencias_fasta

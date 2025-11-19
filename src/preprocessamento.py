@@ -1,8 +1,6 @@
 from typing import Tuple
-
 import pandas as pd
 from sklearn.preprocessing import StandardScaler, LabelEncoder
-
 
 def pre_processar_dados(
     df: pd.DataFrame,
